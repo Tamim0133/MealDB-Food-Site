@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      body {
+        background: url(photo-1504674900247-0877df9cc836.jpg) no-repeat;
+
+        background-size: cover;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="col-md-6 m-auto py-5">
+        <div class="input-group mb-3">
+          <input
+            id="input-field"
+            type="text"
+            class="form-control"
+            placeholder="Food name or Recipe"
+          />
+          <div class="input-group-append">
+            <button
+              onclick="searchOperation()"
+              type="button"
+              class="btn btn-danger"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!---------------------------------------------------
+                             Main Part Starts 
+                  ----------------------------------------------- -->
+
+    <main class="container">
+      <!-- spinner -->
+      <div
+        class="d-flex justify-content-center mt-5 d-none bg-white p-4"
+        id="spinner"
+      >
+        <div class="spinner-grow text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- spinner end-->
+      <div id="single-meal-details" class="mx-auto"></div>
+      <div id="parent-container" class="row row-cols-1 row-cols-lg-3 "></div>
+      <div
+        id="error-message"
+        class="bg-danger text-white text-center p-4 fw-bolder rounded-3 d-none"
+      >
+        <p>Please, Enter a Valid Name</p>
+        <hr class="text-white" />
+        <p>No Matches Found</p>
+      </div>
+    </main>
+
+    <!-- ---------------------------------------------------------
+                               Adding Javascript Files 
+                    -------------------------------------------------------------- -->
+
+    <script src="index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
